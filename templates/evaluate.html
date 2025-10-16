@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Evaluate Assignment</title></head>
+
+<body>
+    <h1>Evaluate Assignment</h1>
+    <form method="post" action="/evaluate">
+        Student Answer: <textarea name="answer" required></textarea>
+        <input type="submit" value="Evaluate">
+    </form>
+    {% if result %}
+        <h2>Evaluation:</h2>
+        <p><strong>Feedback:</strong> {{ result.feedback }}</p>
+        <p><strong>Score:</strong> {{ result.score }}/5</p>
+        <p><strong>AI Generated:</strong> {{ result.ai_generated }}</p>
+    {% endif %}
+    <a href="/">Home</a>
+</body>
+</html>

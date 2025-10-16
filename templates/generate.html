@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Generate Assignment</title></head>
+
+<body>
+    <h1>Generate Assignment</h1>
+    <form method="post" action="/generate">
+        Topic: <input type="text" name="topic" required>
+        <input type="submit" value="Generate">
+    </form> 
+    {% if assignment %}
+        <h2>Assignment:</h2>
+        <p>{{ assignment }}</p>
+    {% endif %}
+    <a href="/">Home</a>
+</body>
+</html>
